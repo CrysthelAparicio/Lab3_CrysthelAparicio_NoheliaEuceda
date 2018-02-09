@@ -26,9 +26,12 @@ public class ProyectoPublicitario extends Proyecto {
     public Freelance getFreelance() {
         return freelance;
     }
+    
+    
 
     public void setFreelance(Freelance freelance) {
         this.freelance = freelance;
+        //if(freelance instanceof   )
     }
 
     @Override
