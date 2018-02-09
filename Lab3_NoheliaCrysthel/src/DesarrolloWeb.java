@@ -20,13 +20,14 @@ public class DesarrolloWeb extends Freelance {
     public DesarrolloWeb() {
         super();
     }
-
+    
     public DesarrolloWeb(String lenguajeProgra, String Universidad, String Idioma, String nombre, String contraseña, int edad, char genero, double dinero, String ciudad, String telefono, String id, String correo) {
         super(nombre, contraseña, edad, genero, dinero, ciudad, telefono, id, correo);
         this.lenguajeProgra = lenguajeProgra;
         this.Universidad = Universidad;
         this.Idioma = Idioma;
     }
+
 
     public String getLenguajeProgra() {
         return lenguajeProgra;
