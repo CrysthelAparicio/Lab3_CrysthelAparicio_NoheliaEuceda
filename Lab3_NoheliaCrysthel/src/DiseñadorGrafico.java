@@ -14,5 +14,5 @@ import java.util.ArrayList;
 public class DiseñadorGrafico extends Freelance{
     ArrayList<Proyecto> proyectospubli = new ArrayList();
     private String Universidad;
-    ArrayList<Hobbies> hobbies = new ArrayList();
+    String hobbies;
 }
