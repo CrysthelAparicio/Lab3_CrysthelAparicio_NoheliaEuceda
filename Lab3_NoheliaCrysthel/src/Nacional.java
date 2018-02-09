@@ -19,7 +19,7 @@ public class Nacional extends Empresa {
     public Nacional() {
         super();
     }
-
+    
     public String getDepto() {
         return depto;
     }

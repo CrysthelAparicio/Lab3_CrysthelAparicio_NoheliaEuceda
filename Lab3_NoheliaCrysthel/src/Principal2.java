@@ -7,15 +7,11 @@ import java.util.Scanner;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author euced
  */
 public class Principal2 {
-
-
-
 
     public static void main(String[] args) {
         ArrayList<Object> lista = new ArrayList();
@@ -84,8 +80,8 @@ public class Principal2 {
                                         universidad = sc.nextLine();
                                         System.out.println("Ingrese idioma");
                                         idioma = sc.nextLine();
-                                        lista.add(new DesarrolloWeb( lengProg, universidad, idioma,  usuario, password,  edad,  genero,  dinero,  ciudad,  telefono,  noID, correo));
-                                        
+                                        lista.add(new DesarrolloWeb(lengProg, universidad, idioma, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
+
                                         break;
                                     case 2:
                                         System.out.println("Ingrese Numero Identidad");
@@ -110,7 +106,7 @@ public class Principal2 {
                                         universidad = sc.nextLine();
                                         System.out.println("Ingrese hobbies");
                                         hobbies = sc.nextLine();
-                                        lista.add(new DiseñadorGrafico(universidad,hobbies, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
+                                        lista.add(new DiseñadorGrafico(universidad, hobbies, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
                                         break;
                                     case 3:
                                         System.out.println("Ingrese Numero Identidad");
@@ -163,7 +159,7 @@ public class Principal2 {
                                         lista.add(new MediosAudioVisuales(nombreMarca, modeloCamara, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
                                         break;
                                     case 5:
-                                        
+
                                         break;
                                 }
                                 break;
@@ -175,11 +171,38 @@ public class Principal2 {
                         correo = sc.nextLine();
                         System.out.println("Ingrese contraseña");
                         password = sc.nextLine();
-                        
+                        int flag = 1;
+
                         for (Object user : lista) {
-                            if (user instanceof Persona) {
-                                if (((Freelance) user).getCorreo().equals(correo)||((Administrador) user).getCorreo().equals(correo)) {
-                                    
+                            if (((Persona) user).getCorreo().equals(correo) || ((Empresa) user).getCorreo().equals(correo)) {
+                                if (((Freelance) user).getContraseña().equals(password) || ((Administrador) user).getContraseña().equals(password) || ((Empresa) user).getContraseña().equals(password)) {
+                                    if (user instanceof Administrador) {
+                                        
+                                        System.out.println("Menu Administrador \n 1. Ver Ingresos \n 2. Modificar datos \n 3. Cerrar Sesion");
+                                        dentCas = sc.nextInt();
+                                        while (flag == 1) {
+                                            switch (dentCas) {
+                                                case 1:
+                                                    break;
+
+                                                case 2:
+                                                    System.out.println("Ingrese Numero Identidad");
+                                                    noID = sc.nextLine();
+                                                    ((Administrador)user).setId(noID);
+                                                    System.out.println("Ingrese Correo Electrónico");
+                                                    correo = sc.nextLine();
+                                                    ((Administrador)user).setCorreo(correo);
+                                                    System.out.println("Ingrese Nombre");
+                                                    usuario = sc.nextLine();
+                                                    ((Administrador)user).setUsuario(usuario);
+                                                    System.out.println("Ingrese Contraseña");
+                                                    password = sc.nextLine();
+                                                    ((Administrador)user).setContraseña(password);
+                                                    break;
+                                            }
+                                        }
+
+                                    }
                                 }
                             }
                         }
@@ -215,5 +238,3 @@ public class Principal2 {
         }
     }
 }
-
-
