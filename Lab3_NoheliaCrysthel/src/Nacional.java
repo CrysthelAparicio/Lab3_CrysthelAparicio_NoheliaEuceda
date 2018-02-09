@@ -20,6 +20,15 @@ public class Nacional extends Empresa {
         super();
     }
 
+    public Nacional(String depto, String municipio, String ciudad, String mision, String vision, String nombre, String telefono, String correo, String contraseña, String descripcion) {
+        super(nombre, telefono, correo, contraseña, descripcion);
+        this.depto = depto;
+        this.municipio = municipio;
+        this.ciudad = ciudad;
+        this.mision = mision;
+        this.vision = vision;
+    }
+
     public String getDepto() {
         return depto;
     }
