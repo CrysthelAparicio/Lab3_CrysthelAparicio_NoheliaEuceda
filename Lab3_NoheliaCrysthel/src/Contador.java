@@ -15,5 +15,5 @@ public class Contador {
     ArrayList<Proyecto> proyectosComerciales = new ArrayList();
     private String universidad;
     private boolean EstadoInscripcion;
-    ArrayList<Hobbies> hobbies = new ArrayList();
+    String hobbies;
 }

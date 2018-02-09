@@ -10,12 +10,10 @@ package lab3_noheliacrysthel;
  * @author COPECO -13
  */
 public class Lab3_NoheliaCrysthel {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
+        
     }
     
 }
