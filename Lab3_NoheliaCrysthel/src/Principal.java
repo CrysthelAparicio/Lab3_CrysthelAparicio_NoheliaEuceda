@@ -269,6 +269,169 @@ public class Principal {
                             default:
                                 System.out.println("Opcion Invalida");
                         }
+                    case 2:
+                        System.out.println("Ingrese correo");
+                        correo = sc.nextLine();
+                        System.out.println("Ingrese contraseña");
+                        password = sc.nextLine();
+                        int flag = 1;
+
+                        for (Object user : lista) {
+                            if (((Persona) user).getCorreo().equals(correo) || ((Empresa) user).getCorreo().equals(correo)) {
+                                if (((Freelance) user).getContraseña().equals(password) || ((Administrador) user).getContraseña().equals(password) || ((Empresa) user).getContraseña().equals(password)) {
+                                    if (user instanceof Administrador) {
+
+                                        System.out.println("Menu Administrador \n 1. Ver Ingresos \n 2. Modificar datos \n 3. Eliminar Administrador \n 4. Cerrar Sesion");
+                                        dentCas = sc.nextInt();
+                                        while (flag == 1) {
+                                            switch (dentCas) {
+                                                case 1:
+                                                    //System.out.println(ConnectiveLine.getProyectospubli().);
+                                                    break;
+
+                                                case 2:
+                                                    System.out.println("Ingrese Numero Identidad");
+                                                    noID = sc.nextLine();
+                                                    ((Administrador) user).setId(noID);
+                                                    System.out.println("Ingrese Correo Electrónico");
+                                                    correo = sc.nextLine();
+                                                    ((Administrador) user).setCorreo(correo);
+                                                    System.out.println("Ingrese Nombre");
+                                                    usuario = sc.nextLine();
+                                                    ((Administrador) user).setUsuario(usuario);
+                                                    System.out.println("Ingrese Contraseña");
+                                                    password = sc.nextLine();
+                                                    ((Administrador) user).setContraseña(password);
+                                                    break;
+                                                case 3:
+                                                    System.out.println("Ingrese correo");
+                                                    correo = sc.nextLine();
+                                                    System.out.println("Ingrese contraseña");
+                                                    password = sc.nextLine();
+                                                    if (correo.equals(((Administrador) user).getCorreo()) && password.equals(((Administrador) user).getContraseña())) {
+                                                        lista.remove(user);
+                                                        flag = 2;
+                                                    }
+                                                    break;
+                                                case 4:
+                                                    flag = 2;
+                                                    break;
+
+                                            }
+                                        }
+
+                                    } else if (user instanceof Freelance) {
+                                        System.out.println("Menu Freelance \n 1. Modificar datos \n 2. Eliminar Freelance \n 3. Visualizar Proyecto \n 4. Cerrar Sesion");
+                                        dentCas = sc.nextInt();
+                                        if (user instanceof DesarrolloWeb) {
+                                            while (flag == 1) {
+                                                switch (dentCas) {
+                                                    case 1:
+                                                        System.out.println("Ingrese Numero Identidad");
+                                                        noID = sc.nextLine();
+                                                        ((DesarrolloWeb) user).setId(noID);
+                                                        System.out.println("Ingrese Correo Electrónico");
+                                                        correo = sc.nextLine();
+                                                        ((DesarrolloWeb) user).setCorreo(correo);
+                                                        System.out.println("Ingrese Nombre");
+                                                        usuario = sc.nextLine();
+                                                        System.out.println("Ingrese Contraseña");
+                                                        password = sc.nextLine();
+                                                        System.out.println("Ingrese Genero (M/F)");
+                                                        genero = sc.nextLine().charAt(0);
+                                                        System.out.println("Ingrese edad");
+                                                        edad = sc.nextInt();
+                                                        System.out.println("Ingrese dinero");
+                                                        dinero = sc.nextDouble();
+                                                        System.out.println("Ingrese ciudad");
+                                                        ciudad = sc.nextLine();
+                                                        System.out.println("Ingrese telefono");
+                                                        telefono = sc.nextLine();
+                                                        System.out.println("Ingrese lenguaje Programacion");
+                                                        lengProg = sc.nextLine();
+                                                        System.out.println("Ingrese Universidad");
+                                                        universidad = sc.nextLine();
+                                                        System.out.println("Ingrese idioma");
+                                                        idioma = sc.nextLine();
+                                                        break;
+                                                }
+                                            }
+                                        } else if (user instanceof DiseñadorGrafico) {
+
+                                        } else if (user instanceof Fotografo) {
+
+                                        } else if (user instanceof MediosAudioVisuales) {
+
+                                        } else if (user instanceof Contador) {
+
+                                        } else if (user instanceof Marketing) {
+
+                                        }
+                                    } else if (user instanceof Empresa) {
+                                        System.out.println("Menu Freelance \n 1. Modificar datos \n 2. Eliminar Freelance \n 3. Modifica/Eliminar/Crear Proyecto \n 4. Cerrar Sesion");
+                                        dentCas = sc.nextInt();
+                                        if (user instanceof Nacional) {
+                                            while (flag == 1) {
+                                                switch (dentCas) {
+                                                    case 1:
+                                                        System.out.println("Ingrese Nombre");
+                                                        usuario = sc.nextLine();
+                                                        ((Nacional) ((Empresa) user)).setNombre(usuario);
+                                                        System.out.println("Ingrese telefono");
+                                                        telefono = sc.nextLine();
+                                                        ((Nacional) ((Empresa) user)).setTelefono(telefono);
+                                                        System.out.println("Ingrese Correo Electronico");
+                                                        correo = sc.nextLine();
+                                                        ((Nacional) ((Empresa) user)).setCorreo(correo);
+                                                        System.out.println("Ingrese Contraseña");
+                                                        password = sc.nextLine();
+                                                        ((Nacional) ((Empresa) user)).setContraseña(password);
+                                                        System.out.println("Ingrese Descripcion");
+                                                        descripcion = sc.nextLine();
+                                                        ((Nacional) ((Empresa) user)).setDescripcion(descripcion);
+                                                        System.out.println("Ingrese departamento");
+                                                        depto = sc.nextLine();
+                                                        ((Nacional) ((Empresa) user)).setDepto(depto);
+                                                        System.out.println("Ingrese Municipio");
+                                                        municipio = sc.nextLine();
+                                                        ((Nacional) ((Empresa) user)).setMunicipio(municipio);
+                                                        System.out.println("Ingrese Ciudad");
+                                                        ciudad = sc.nextLine();
+                                                        ((Nacional) ((Empresa) user)).setCiudad(ciudad);
+                                                        System.out.println("Ingrese Mision");
+                                                        mision = sc.nextLine();
+                                                        ((Nacional) ((Empresa) user)).setMision(mision);
+                                                        System.out.println("Ingrese Vision");
+                                                        vision = sc.nextLine();
+                                                        ((Nacional) ((Empresa) user)).setVision(vision);
+                                                        break;
+                                                    case 2:
+                                                        System.out.println("Ingrese correo");
+                                                        correo = sc.nextLine();
+                                                        System.out.println("Ingrese contraseña");
+                                                        password = sc.nextLine();
+                                                        if (correo.equals(((Nacional) ((Empresa) user)).getCorreo()) && password.equals(((Nacional) ((Empresa) user)).getContraseña())) {
+                                                            lista.remove(user);
+                                                            flag = 2;
+                                                        }
+                                                        break;
+                                                    case 3:
+                                                        //
+                                                        break;
+                                                    case 4:
+                                                        flag = 2;
+                                                        break;
+                                                        
+                                                                
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        break;
                 }
 
                 System.out.println("Desea Regresar al menu? (1 si/ 2 no)");
