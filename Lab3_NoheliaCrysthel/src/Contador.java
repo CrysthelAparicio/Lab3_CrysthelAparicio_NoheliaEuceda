@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author COPECO -13
  */
-public class Contador {
+public class Contador extends Freelance {
 
     ArrayList<Proyecto> proyectosComerciales = new ArrayList();
     private String universidad;
@@ -20,11 +20,14 @@ public class Contador {
     public Contador() {
     }
 
-    public Contador(String universidad, boolean EstadoInscripcion, String hobbies) {
+    public Contador(String universidad, boolean EstadoInscripcion, String hobbies, String nombre, String contraseña, int edad, char genero, double dinero, String ciudad, String telefono, String id, String correo) {
+        super(nombre, contraseña, edad, genero, dinero, ciudad, telefono, id, correo);
         this.universidad = universidad;
         this.EstadoInscripcion = EstadoInscripcion;
         this.hobbies = hobbies;
     }
+    
+   
 
     public ArrayList<Proyecto> getProyectosComerciales() {
         return proyectosComerciales;
