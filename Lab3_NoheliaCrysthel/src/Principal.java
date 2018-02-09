@@ -25,6 +25,7 @@ public class Principal {
         char genero;
         double dinero;
         int edad;
+        boolean EstadoInscripcion;
 
         String opcion;
         int opt;
@@ -80,8 +81,8 @@ public class Principal {
                                         universidad = sc.nextLine();
                                         System.out.println("Ingrese idioma");
                                         idioma = sc.nextLine();
-                                        lista.add(new DesarrolloWeb( lengProg, universidad, idioma,  usuario, password,  edad,  genero,  dinero,  ciudad,  telefono,  noID, correo));
-                                        
+                                        lista.add(new DesarrolloWeb(lengProg, universidad, idioma, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
+
                                         break;
                                     case 2:
                                         System.out.println("Ingrese Numero Identidad");
@@ -106,7 +107,7 @@ public class Principal {
                                         universidad = sc.nextLine();
                                         System.out.println("Ingrese hobbies");
                                         hobbies = sc.nextLine();
-                                        lista.add(new DiseñadorGrafico(universidad,hobbies, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
+                                        lista.add(new DiseñadorGrafico(universidad, hobbies, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
                                         break;
                                     case 3:
                                         System.out.println("Ingrese Numero Identidad");
@@ -159,8 +160,54 @@ public class Principal {
                                         lista.add(new MediosAudioVisuales(nombreMarca, modeloCamara, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
                                         break;
                                     case 5:
-                                        
+                                        System.out.println("Ingrese Numero Identidad");
+                                        noID = sc.nextLine();
+                                        System.out.println("Ingrese Correo Electrónico");
+                                        correo = sc.nextLine();
+                                        System.out.println("Ingrese Nombre");
+                                        usuario = sc.nextLine();
+                                        System.out.println("Ingrese Contraseña");
+                                        password = sc.nextLine();
+                                        System.out.println("Ingrese Genero (M/F)");
+                                        genero = sc.nextLine().charAt(0);
+                                        System.out.println("Ingrese edad");
+                                        edad = sc.nextInt();
+                                        System.out.println("Ingrese dinero");
+                                        dinero = sc.nextDouble();
+                                        System.out.println("Ingrese ciudad");
+                                        ciudad = sc.nextLine();
+                                        System.out.println("Ingrese telefono");
+                                        telefono = sc.nextLine();
+                                        System.out.println("Ingrese la red social mas usada");
+                                        redSocial = sc.nextLine();
+                                        lista.add(new Marketing(redSocial, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
                                         break;
+                                    case 6:
+                                        System.out.println("Ingrese Numero Identidad");
+                                        noID = sc.nextLine();
+                                        System.out.println("Ingrese Correo Electrónico");
+                                        correo = sc.nextLine();
+                                        System.out.println("Ingrese Nombre");
+                                        usuario = sc.nextLine();
+                                        System.out.println("Ingrese Contraseña");
+                                        password = sc.nextLine();
+                                        System.out.println("Ingrese Genero (M/F)");
+                                        genero = sc.nextLine().charAt(0);
+                                        System.out.println("Ingrese edad");
+                                        edad = sc.nextInt();
+                                        System.out.println("Ingrese dinero");
+                                        dinero = sc.nextDouble();
+                                        System.out.println("Ingrese ciudad");
+                                        ciudad = sc.nextLine();
+                                        System.out.println("Ingrese telefono");
+                                        telefono = sc.nextLine();
+                                        System.out.println("Ingrese Universidad");
+                                        universidad = sc.nextLine();
+                                        System.out.println("Estado de la Inscripcion");
+                                        EstadoInscripcion = sc.nextBoolean();
+                                        System.out.println("Ingrese hobbies");
+                                        hobbies = sc.nextLine();
+                                        lista.add(new Contador(universidad, EstadoInscripcion,hobbies, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
                                 }
                                 break;
                         }
