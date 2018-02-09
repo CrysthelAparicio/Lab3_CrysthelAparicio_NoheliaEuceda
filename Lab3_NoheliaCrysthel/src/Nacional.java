@@ -19,6 +19,9 @@ public class Nacional extends Empresa {
     public Nacional() {
         super();
     }
+//<<<<<<< HEAD
+    
+//=======
 
     public Nacional(String depto, String municipio, String ciudad, String mision, String vision, String nombre, String telefono, String correo, String contraseña, String descripcion) {
         super(nombre, telefono, correo, contraseña, descripcion);
@@ -29,6 +32,7 @@ public class Nacional extends Empresa {
         this.vision = vision;
     }
 
+//>>>>>>> b3cdcbe0da37713a257b32c9df7bcc26af638640
     public String getDepto() {
         return depto;
     }
