@@ -279,12 +279,7 @@ public class Principal {
             }
 
         }
-
-    
-
-    
-
-    
+    }
 
     public static boolean verificaNum(String str) {
         int cont = 0;
