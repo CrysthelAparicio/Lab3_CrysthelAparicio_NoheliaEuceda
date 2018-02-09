@@ -83,7 +83,84 @@ public class Principal {
                                         lista.add(new DesarrolloWeb( lengProg, universidad, idioma,  usuario, password,  edad,  genero,  dinero,  ciudad,  telefono,  noID, correo));
                                         
                                         break;
+                                    case 2:
+                                        System.out.println("Ingrese Numero Identidad");
+                                        noID = sc.nextLine();
+                                        System.out.println("Ingrese Correo Electrónico");
+                                        correo = sc.nextLine();
+                                        System.out.println("Ingrese Nombre");
+                                        usuario = sc.nextLine();
+                                        System.out.println("Ingrese Contraseña");
+                                        password = sc.nextLine();
+                                        System.out.println("Ingrese Genero (M/F)");
+                                        genero = sc.nextLine().charAt(0);
+                                        System.out.println("Ingrese edad");
+                                        edad = sc.nextInt();
+                                        System.out.println("Ingrese dinero");
+                                        dinero = sc.nextDouble();
+                                        System.out.println("Ingrese ciudad");
+                                        ciudad = sc.nextLine();
+                                        System.out.println("Ingrese telefono");
+                                        telefono = sc.nextLine();
+                                        System.out.println("Ingrese Universidad");
+                                        universidad = sc.nextLine();
+                                        System.out.println("Ingrese hobbies");
+                                        hobbies = sc.nextLine();
+                                        lista.add(new DiseñadorGrafico(universidad,hobbies, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
+                                        break;
+                                    case 3:
+                                        System.out.println("Ingrese Numero Identidad");
+                                        noID = sc.nextLine();
+                                        System.out.println("Ingrese Correo Electrónico");
+                                        correo = sc.nextLine();
+                                        System.out.println("Ingrese Nombre");
+                                        usuario = sc.nextLine();
+                                        System.out.println("Ingrese Contraseña");
+                                        password = sc.nextLine();
+                                        System.out.println("Ingrese Genero (M/F)");
+                                        genero = sc.nextLine().charAt(0);
+                                        System.out.println("Ingrese edad");
+                                        edad = sc.nextInt();
+                                        System.out.println("Ingrese dinero");
+                                        dinero = sc.nextDouble();
+                                        System.out.println("Ingrese ciudad");
+                                        ciudad = sc.nextLine();
+                                        System.out.println("Ingrese telefono");
+                                        telefono = sc.nextLine();
+                                        System.out.println("Ingrese nombre de la marca");
+                                        nombreMarca = sc.nextLine();
+                                        System.out.println("Ingrese el modelo de la camara");
+                                        modeloCamara = sc.nextLine();
+                                        lista.add(new Fotografo(nombreMarca, modeloCamara, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
+                                        break;
+                                    case 4:
+                                        System.out.println("Ingrese Numero Identidad");
+                                        noID = sc.nextLine();
+                                        System.out.println("Ingrese Correo Electrónico");
+                                        correo = sc.nextLine();
+                                        System.out.println("Ingrese Nombre");
+                                        usuario = sc.nextLine();
+                                        System.out.println("Ingrese Contraseña");
+                                        password = sc.nextLine();
+                                        System.out.println("Ingrese Genero (M/F)");
+                                        genero = sc.nextLine().charAt(0);
+                                        System.out.println("Ingrese edad");
+                                        edad = sc.nextInt();
+                                        System.out.println("Ingrese dinero");
+                                        dinero = sc.nextDouble();
+                                        System.out.println("Ingrese ciudad");
+                                        ciudad = sc.nextLine();
+                                        System.out.println("Ingrese telefono");
+                                        telefono = sc.nextLine();
+                                        System.out.println("Ingrese nombre de la marca");
+                                        nombreMarca = sc.nextLine();
+                                        System.out.println("Ingrese el modelo de la camara");
+                                        modeloCamara = sc.nextLine();
+                                        lista.add(new MediosAudioVisuales(nombreMarca, modeloCamara, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
+                                        break;
+                                    case 5:
                                         
+                                        break;
                                 }
                                 break;
                         }
