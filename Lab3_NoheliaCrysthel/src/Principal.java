@@ -21,10 +21,11 @@ public class Principal {
         String dentCaso;
         int dentCas;
         String noID, correo, usuario, password, nombre, ciudad, telefono;
-        String lengProg, universidad, idioma, hobbies, nombreMarca, modeloCamara, redSocial, estadoInsc;
+        String pais, pagweb, municipio, mision, vision, depto, lengProg, universidad, idioma, hobbies, nombreMarca, modeloCamara, redSocial, estadoInsc, descripcion;
         char genero;
         double dinero;
         int edad;
+        boolean EstadoInscripcion;
 
         String opcion;
         int opt;
@@ -80,8 +81,8 @@ public class Principal {
                                         universidad = sc.nextLine();
                                         System.out.println("Ingrese idioma");
                                         idioma = sc.nextLine();
-                                        lista.add(new DesarrolloWeb( lengProg, universidad, idioma,  usuario, password,  edad,  genero,  dinero,  ciudad,  telefono,  noID, correo));
-                                        
+                                        lista.add(new DesarrolloWeb(lengProg, universidad, idioma, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
+
                                         break;
                                     case 2:
                                         System.out.println("Ingrese Numero Identidad");
@@ -106,7 +107,7 @@ public class Principal {
                                         universidad = sc.nextLine();
                                         System.out.println("Ingrese hobbies");
                                         hobbies = sc.nextLine();
-                                        lista.add(new DiseñadorGrafico(universidad,hobbies, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
+                                        lista.add(new DiseñadorGrafico(universidad, hobbies, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
                                         break;
                                     case 3:
                                         System.out.println("Ingrese Numero Identidad");
@@ -159,32 +160,131 @@ public class Principal {
                                         lista.add(new MediosAudioVisuales(nombreMarca, modeloCamara, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
                                         break;
                                     case 5:
-                                        
+                                        System.out.println("Ingrese Numero Identidad");
+                                        noID = sc.nextLine();
+                                        System.out.println("Ingrese Correo Electrónico");
+                                        correo = sc.nextLine();
+                                        System.out.println("Ingrese Nombre");
+                                        usuario = sc.nextLine();
+                                        System.out.println("Ingrese Contraseña");
+                                        password = sc.nextLine();
+                                        System.out.println("Ingrese Genero (M/F)");
+                                        genero = sc.nextLine().charAt(0);
+                                        System.out.println("Ingrese edad");
+                                        edad = sc.nextInt();
+                                        System.out.println("Ingrese dinero");
+                                        dinero = sc.nextDouble();
+                                        System.out.println("Ingrese ciudad");
+                                        ciudad = sc.nextLine();
+                                        System.out.println("Ingrese telefono");
+                                        telefono = sc.nextLine();
+                                        System.out.println("Ingrese la red social mas usada");
+                                        redSocial = sc.nextLine();
+                                        lista.add(new Marketing(redSocial, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
                                         break;
+                                    case 6:
+                                        System.out.println("Ingrese Numero Identidad");
+                                        noID = sc.nextLine();
+                                        System.out.println("Ingrese Correo Electrónico");
+                                        correo = sc.nextLine();
+                                        System.out.println("Ingrese Nombre");
+                                        usuario = sc.nextLine();
+                                        System.out.println("Ingrese Contraseña");
+                                        password = sc.nextLine();
+                                        System.out.println("Ingrese Genero (M/F)");
+                                        genero = sc.nextLine().charAt(0);
+                                        System.out.println("Ingrese edad");
+                                        edad = sc.nextInt();
+                                        System.out.println("Ingrese dinero");
+                                        dinero = sc.nextDouble();
+                                        System.out.println("Ingrese ciudad");
+                                        ciudad = sc.nextLine();
+                                        System.out.println("Ingrese telefono");
+                                        telefono = sc.nextLine();
+                                        System.out.println("Ingrese Universidad");
+                                        universidad = sc.nextLine();
+                                        System.out.println("Estado de la Inscripcion");
+                                        EstadoInscripcion = sc.nextBoolean();
+                                        System.out.println("Ingrese hobbies");
+                                        hobbies = sc.nextLine();
+                                        lista.add(new Contador(universidad, EstadoInscripcion, hobbies, usuario, password, edad, genero, dinero, ciudad, telefono, noID, correo));
                                 }
                                 break;
                         }
 
                         break;
-                    case 2:
-
-                        break;
                     case 3:
+                        System.out.println("Tipo de Empresa \n 1. Nacional \n 2. Extranjera \n");
+                        dentCas = sc.nextInt();
+                        switch (dentCas) {
+                            case 1:
+                                System.out.println("Ingrese Nombre");
+                                usuario = sc.nextLine();
+                                System.out.println("Ingrese telefono");
+                                telefono = sc.nextLine();
+                                System.out.println("Ingrese Correo Electronico");
+                                correo = sc.nextLine();
+                                System.out.println("Ingrese Contraseña");
+                                password = sc.nextLine();
+                                System.out.println("Ingrese Descripcion");
+                                descripcion = sc.nextLine();
+                                System.out.println("Ingrese departamento");
+                                depto = sc.nextLine();
+                                System.out.println("Ingrese Municipio");
+                                municipio = sc.nextLine();
+                                System.out.println("Ingrese Ciudad");
+                                ciudad = sc.nextLine();
+                                System.out.println("Ingrese Mision");
+                                mision = sc.nextLine();
+                                System.out.println("Ingrese Vision");
+                                vision = sc.nextLine();
+                                lista.add(new Nacional(depto, municipio, ciudad, mision, vision, usuario, telefono, correo, password, descripcion));
+                                break;
+                            case 2:
+                                System.out.println("Ingrese Nombre");
+                                usuario = sc.nextLine();
+                                System.out.println("Ingrese telefono");
+                                telefono = sc.nextLine();
+                                System.out.println("Ingrese Correo Electronico");
+                                correo = sc.nextLine();
+                                System.out.println("Ingrese Contraseña");
+                                password = sc.nextLine();
+                                System.out.println("Ingrese Descripcion");
+                                descripcion = sc.nextLine();
+                                System.out.println("Ingrese Pais");
+                                pais = sc.nextLine();
+                                System.out.println("Ingrese Ciudad");
+                                ciudad = sc.nextLine();
+                                System.out.println("Ingrese Pagina web (URL)");
+                                pagweb = sc.nextLine();
+                                System.out.println("Ingrese Mision");
+                                mision = sc.nextLine();
+                                System.out.println("Ingrese Vision");
+                                vision = sc.nextLine();
+                                lista.add(new Extranjera(pais, ciudad, pagweb, usuario, telefono, correo, password, descripcion));
+                                break;
+                            case 4:
 
-                        break;
-                    default:
-                        System.out.println("Opcion Invalida");
+                                break;
+                            default:
+                                System.out.println("Opcion Invalida");
+                        }
+                }
+
+                System.out.println("Desea Regresar al menu? (1 si/ 2 no)");
+                respuesta = sc.nextLine();
+                if (verificaNum(respuesta)) {
+                    res = Integer.parseInt(respuesta);
                 }
             }
 
-            System.out.println("Desea Regresar al menu? (1 si/ 2 no)");
-            respuesta = sc.nextLine();
-            if (verificaNum(respuesta)) {
-                res = Integer.parseInt(respuesta);
-            }
         }
 
     }
+
+    
+
+    
 
     public static boolean verificaNum(String str) {
         int cont = 0;
