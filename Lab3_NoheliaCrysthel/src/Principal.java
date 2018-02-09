@@ -330,41 +330,215 @@ public class Principal {
                                                         System.out.println("Ingrese Numero Identidad");
                                                         noID = sc.nextLine();
                                                         ((DesarrolloWeb) user).setId(noID);
+
                                                         System.out.println("Ingrese Correo Electrónico");
                                                         correo = sc.nextLine();
                                                         ((DesarrolloWeb) user).setCorreo(correo);
+
                                                         System.out.println("Ingrese Nombre");
                                                         usuario = sc.nextLine();
+                                                        ((DesarrolloWeb) user).setNombre(usuario);
+
                                                         System.out.println("Ingrese Contraseña");
                                                         password = sc.nextLine();
+                                                        ((DesarrolloWeb) user).setContraseña(password);
+
                                                         System.out.println("Ingrese Genero (M/F)");
                                                         genero = sc.nextLine().charAt(0);
+                                                        ((DesarrolloWeb) user).setGenero(genero);
+
                                                         System.out.println("Ingrese edad");
                                                         edad = sc.nextInt();
+                                                        ((DesarrolloWeb) user).setEdad(edad);
+
                                                         System.out.println("Ingrese dinero");
                                                         dinero = sc.nextDouble();
+                                                        ((DesarrolloWeb) user).setDinero(dinero);
+
                                                         System.out.println("Ingrese ciudad");
                                                         ciudad = sc.nextLine();
+                                                        ((DesarrolloWeb) user).setCiudad(ciudad);
+
                                                         System.out.println("Ingrese telefono");
                                                         telefono = sc.nextLine();
+                                                        ((DesarrolloWeb) user).setTelefono(telefono);
+
                                                         System.out.println("Ingrese lenguaje Programacion");
                                                         lengProg = sc.nextLine();
+                                                        ((DesarrolloWeb) user).setLenguajeProgra(lengProg);
+
                                                         System.out.println("Ingrese Universidad");
                                                         universidad = sc.nextLine();
+                                                        ((DesarrolloWeb) user).setUniversidad(universidad);
+
                                                         System.out.println("Ingrese idioma");
                                                         idioma = sc.nextLine();
+                                                        ((DesarrolloWeb) user).setIdioma(idioma);
                                                         break;
                                                 }
                                             }
                                         } else if (user instanceof DiseñadorGrafico) {
+                                            System.out.println("Ingrese Numero Identidad");
+                                            noID = sc.nextLine();
+                                            ((DiseñadorGrafico) user).setId(noID);
+
+                                            System.out.println("Ingrese Correo Electrónico");
+                                            correo = sc.nextLine();
+                                            ((DiseñadorGrafico) user).setCorreo(correo);
+
+                                            System.out.println("Ingrese Nombre");
+                                            usuario = sc.nextLine();
+                                            ((DiseñadorGrafico) user).setNombre(usuario);
+
+                                            System.out.println("Ingrese Contraseña");
+                                            password = sc.nextLine();
+                                            ((DiseñadorGrafico) user).setContraseña(password);
+
+                                            System.out.println("Ingrese Genero (M/F)");
+                                            genero = sc.nextLine().charAt(0);
+                                            ((DiseñadorGrafico) user).setGenero(genero);
+
+                                            System.out.println("Ingrese edad");
+                                            edad = sc.nextInt();
+                                            ((DiseñadorGrafico) user).setEdad(edad);
+
+                                            System.out.println("Ingrese dinero");
+                                            dinero = sc.nextDouble();
+                                            ((DiseñadorGrafico) user).setDinero(dinero);
+
+                                            System.out.println("Ingrese ciudad");
+                                            ciudad = sc.nextLine();
+                                            ((DiseñadorGrafico) user).setCiudad(ciudad);
+
+                                            System.out.println("Ingrese telefono");
+                                            telefono = sc.nextLine();
+                                            ((DiseñadorGrafico) user).setTelefono(telefono);
+
+                                            System.out.println("Ingrese Universidad");
+                                            universidad = sc.nextLine();
+                                            ((DiseñadorGrafico) user).setUniversidad(universidad);
+
+                                            System.out.println("Ingrese hobbies");
+                                            hobbies = sc.nextLine();
+                                            ((DiseñadorGrafico) user).setHobbies(hobbies);
 
                                         } else if (user instanceof Fotografo) {
+                                            System.out.println("Ingrese Numero Identidad");
+                                            noID = sc.nextLine();
+                                            ((Fotografo) user).setId(noID);
+
+                                            System.out.println("Ingrese Correo Electrónico");
+                                            correo = sc.nextLine();
+                                            ((Fotografo) user).setCorreo(correo);
+
+                                            System.out.println("Ingrese Nombre");
+                                            usuario = sc.nextLine();
+                                            ((Fotografo) user).setNombre(usuario);
+
+                                            System.out.println("Ingrese Contraseña");
+                                            password = sc.nextLine();
+                                            ((Fotografo) user).setContraseña(password);
+
+                                            System.out.println("Ingrese Genero (M/F)");
+                                            genero = sc.nextLine().charAt(0);
+                                            ((Fotografo) user).setGenero(genero);
+
+                                            System.out.println("Ingrese edad");
+                                            edad = sc.nextInt();
+                                            ((Fotografo) user).setEdad(edad);
+
+                                            System.out.println("Ingrese dinero");
+                                            dinero = sc.nextDouble();
+                                            ((Fotografo) user).setDinero(dinero);
+
+                                            System.out.println("Ingrese ciudad");
+                                            ciudad = sc.nextLine();
+                                            ((Fotografo) user).setCiudad(ciudad);
+
+                                            System.out.println("Ingrese telefono");
+                                            telefono = sc.nextLine();
+                                            ((Fotografo) user).setTelefono(telefono);
+
+                                            System.out.println("Ingrese nombre de la marca");
+                                            nombreMarca = sc.nextLine();
+                                            ((Fotografo) user).setNombreMarca(nombreMarca);
+
+                                            System.out.println("Ingrese el modelo de la camara");
+                                            modeloCamara = sc.nextLine();
+                                            ((Fotografo) user).setModeloCamara(modeloCamara);
 
                                         } else if (user instanceof MediosAudioVisuales) {
+                                            System.out.println("Ingrese Numero Identidad");
+                                            noID = sc.nextLine();
+                                            ((MediosAudioVisuales) user).setId(noID);
+
+                                            System.out.println("Ingrese Correo Electrónico");
+                                            correo = sc.nextLine();
+                                            ((MediosAudioVisuales) user).setCorreo(correo);
+
+                                            System.out.println("Ingrese Nombre");
+                                            usuario = sc.nextLine();
+                                            ((MediosAudioVisuales) user).setNombre(usuario);
+
+                                            System.out.println("Ingrese Contraseña");
+                                            password = sc.nextLine();
+                                            ((MediosAudioVisuales) user).setContraseña(password);
+
+                                            System.out.println("Ingrese Genero (M/F)");
+                                            genero = sc.nextLine().charAt(0);
+                                            ((MediosAudioVisuales) user).setGenero(genero);
+
+                                            System.out.println("Ingrese edad");
+                                            edad = sc.nextInt();
+                                            ((MediosAudioVisuales) user).setEdad(edad);
+
+                                            System.out.println("Ingrese dinero");
+                                            dinero = sc.nextDouble();
+                                            ((MediosAudioVisuales) user).setDinero(dinero);
+
+                                            System.out.println("Ingrese ciudad");
+                                            ciudad = sc.nextLine();
+                                            ((MediosAudioVisuales) user).setCiudad(ciudad);
+
+                                            System.out.println("Ingrese telefono");
+                                            telefono = sc.nextLine();
+                                            ((MediosAudioVisuales) user).setTelefono(telefono);
+
+                                            System.out.println("Ingrese nombre de la marca");
+                                            nombreMarca = sc.nextLine();
+                                            ((MediosAudioVisuales) user).setNombreMarca(nombreMarca);
+
+                                            System.out.println("Ingrese el modelo de la camara");
+                                            modeloCamara = sc.nextLine();
+                                            ((MediosAudioVisuales) user).setModeloCamara(modeloCamara);
 
                                         } else if (user instanceof Contador) {
 
                                         } else if (user instanceof Marketing) {
+                                            System.out.println("Ingrese Numero Identidad");
+                                            noID = sc.nextLine();
+                                            ((Marketing) user).setId(noID);
+
+                                            System.out.println("Ingrese Correo Electrónico");
+                                            correo = sc.nextLine();
+                                            ((Marketing) user).setCorreo(correo);
+
+                                            System.out.println("Ingrese Nombre");
+                                            usuario = sc.nextLine();
+                                            System.out.println("Ingrese Contraseña");
+                                            password = sc.nextLine();
+                                            System.out.println("Ingrese Genero (M/F)");
+                                            genero = sc.nextLine().charAt(0);
+                                            System.out.println("Ingrese edad");
+                                            edad = sc.nextInt();
+                                            System.out.println("Ingrese dinero");
+                                            dinero = sc.nextDouble();
+                                            System.out.println("Ingrese ciudad");
+                                            ciudad = sc.nextLine();
+                                            System.out.println("Ingrese telefono");
+                                            telefono = sc.nextLine();
+                                            System.out.println("Ingrese la red social mas usada");
+                                            redSocial = sc.nextLine();
 
                                         }
                                     } else if (user instanceof Empresa) {
@@ -421,8 +595,56 @@ public class Principal {
                                                     case 4:
                                                         flag = 2;
                                                         break;
-                                                        
-                                                                
+
+                                                }
+
+                                            }
+                                        } else if (user instanceof Extranjera) {
+                                            while (flag == 1) {
+                                                switch (dentCas) {
+                                                    case 1:
+                                                        System.out.println("Ingrese Nombre");
+                                                        usuario = sc.nextLine();
+                                                        ((Extranjera) ((Empresa) user)).setNombre(usuario);
+                                                        System.out.println("Ingrese telefono");
+                                                        telefono = sc.nextLine();
+                                                        ((Extranjera) ((Empresa) user)).setTelefono(telefono);
+                                                        System.out.println("Ingrese Correo Electronico");
+                                                        correo = sc.nextLine();
+                                                        ((Extranjera) ((Empresa) user)).setCorreo(correo);
+                                                        System.out.println("Ingrese Contraseña");
+                                                        password = sc.nextLine();
+                                                        ((Extranjera) ((Empresa) user)).setContraseña(password);
+                                                        System.out.println("Ingrese Descripcion");
+                                                        descripcion = sc.nextLine();
+                                                        ((Extranjera) ((Empresa) user)).setDescripcion(descripcion);
+                                                        System.out.println("Ingrese Pais");
+                                                        pais = sc.nextLine();
+                                                        ((Extranjera) ((Empresa) user)).setPais(pais);
+                                                        System.out.println("Ingrese ciudad");
+                                                        ciudad = sc.nextLine();
+                                                        ((Extranjera) ((Empresa) user)).setCiudad(ciudad);
+                                                        System.out.println("Ingrese pagina web");
+                                                        pagweb = sc.nextLine();
+                                                        ((Extranjera) ((Empresa) user)).setPagweb(pagweb);
+                                                        break;
+                                                    case 2:
+                                                        System.out.println("Ingrese correo");
+                                                        correo = sc.nextLine();
+                                                        System.out.println("Ingrese contraseña");
+                                                        password = sc.nextLine();
+                                                        if (correo.equals(((Extranjera) ((Empresa) user)).getCorreo()) && password.equals(((Extranjera) ((Empresa) user)).getContraseña())) {
+                                                            lista.remove(user);
+                                                            flag = 2;
+                                                        }
+                                                        break;
+                                                    case 3:
+                                                        //
+                                                        break;
+                                                    case 4:
+                                                        flag = 2;
+                                                        break;
+
                                                 }
 
                                             }
